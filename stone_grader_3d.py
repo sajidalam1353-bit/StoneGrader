@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import os
 
 st.set_page_config(page_title="Color Stone Grader", layout="wide")
-st.title("💎 Color Stone Grading App with Persistent Reference Stones")
+st.title("💎VGL Group Color Stone Grading App")
 
 # --- File to store reference stones ---
 DATA_FILE = "reference_stones.csv"
@@ -141,4 +141,5 @@ if st.sidebar.button("Grade Test Stone"):
 # --- Display Reference Stones Table ---
 if not df_reference_stones.empty:
     st.subheader("Reference Stones Database")
+
     st.dataframe(df_reference_stones)
