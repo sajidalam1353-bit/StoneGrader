@@ -297,7 +297,7 @@ with tab1:
 
 # ================== TAB 2 ==================
 with tab2:
-    st.subheader("Upload or Capture Test Stone (instant grading)")
+    st.subheader("VGL Gemstone Grading Syatem")
     g1, g2 = st.columns(2)
     with g1:
         test_file = st.file_uploader("Upload Test Stone", type=["jpg", "jpeg", "png"], key="test_upload")
@@ -350,5 +350,6 @@ with tab2:
                     st.image(lab_to_swatch(best_row["L"], best_row["a"], best_row["b"], size=160),
                              caption="Matched Reference (Color)", use_container_width=True)
             st.markdown('</div>', unsafe_allow_html=True)
+
 
         st.caption(f"Tolerance: ΔE ≤ {st.session_state.tolerance:.1f} (set in Calibration tab)")
